@@ -1,0 +1,284 @@
+:root {
+  --PrimaryColor: #18a1ff;
+  --BackgroundColor: #f5f7fb;
+  --TextColor: #37535e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 4rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .main {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo:hover {
+  box-shadow: none;
+  border: 1px solid var(--PrimaryColor);
+}
+header .logo img {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+}
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+header .main .navbar {
+  position: fixed;
+  width: 94%;
+  top: 5rem;
+  left: 18px;
+  background-color: lightblue;
+}
+header .main .navbar a {
+  display: block;
+  text-align: center;
+  margin: 0 5px;
+  padding: 10px 0;
+}
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: var(--TextColor);
+}
+header .navbar a:hover {
+  color: var(--PrimaryColor);
+}
+
+.hide {
+  display: none;
+}
+
+header button {
+  background-color: var(--PrimaryColor);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+header button:hover {
+  background-color: #1380cc;
+}
+
+/* header section ends */
+
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 75vh;
+  background-image: linear-gradient(
+      90deg,
+      rgba(55, 83, 94, 0.5),
+      rgba(55, 83, 94, 0.4)
+    ),
+    url(./Assets/BG.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  margin-top: 220px;
+  margin-right: 50px;
+}
+
+.home .content .w1 {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: bold;
+}
+.home .content .w2 {
+  font-size: 4rem;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.btn1,
+.btn2 {
+  margin-top: 40px;
+  border: none;
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.btn1 {
+  background-color: var(--TextColor);
+  color: #fff;
+}
+.btn1:hover {
+  background-color: #2c424b;
+}
+.btn2 {
+  margin-right: 50px;
+  opacity: 0.7;
+}
+.btn2:hover {
+  background-color: #ddd;
+}
+
+.about {
+  margin-top: 80px;
+}
+
+.title {
+  color: var(--TextColor);
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.users .graphicSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.graphicSection .card {
+  cursor: pointer;
+  flex-decoration: column;
+  background-color: #fff;
+  width: 250px;
+  text-align: right;
+  height: 350px;
+  border-radius: 20px;
+  margin: 5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.graphicSection .card img {
+  width: 250px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.graphicSection .card .occupation {
+  padding-right: 20px;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: var(--TextColor);
+}
+.graphicSection .card .name {
+  color: var(--TextColor);
+  margin-top: 5px;
+  padding-right: 20px;
+  font-size: 1.2rem;
+}
+
+.graphicSection .card .category {
+  padding-right: 20px;
+  margin-top: 15px;
+}
+
+.graphicSection .card .category div {
+  padding-top: 8px;
+  color: var(--TextColor);
+  font-size: 1.2rem;
+}
+
+.graphicSection .card:hover {
+  transform: scale(1.1);
+}
+
+/* media queries  */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+  header {
+    padding: 4rem 12%;
+  }
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .about .title {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+@media (min-width: 768px) {
+  header .main .navbar {
+  display:block;
+  position:static;
+  width:auto;
+  margin-right:20px;
+  background-color:#fff;
+}
+  header .main .navbar a {
+  display: inline-block;
+  text-align: center;
+  margin: 0 20px;
+  padding: 10px 0;
+}
+.hamburger {
+    display: none;
+  }
+
+  }
+  
